@@ -7,7 +7,7 @@ export const getGlobalData = () => {
     : 'Writing About Technology';
   const footerText = process.env.BLOG_FOOTER_TEXT
     ? decodeURI(process.env.BLOG_FOOTER_TEXT)
-    : 'All rights reserved.';
+    : 'Eric Murrell';
 
   return {
     name,

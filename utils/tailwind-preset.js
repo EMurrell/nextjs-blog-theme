@@ -34,10 +34,10 @@ const themesConfig = plugin(function ({ addComponents }) {
 module.exports = {
   theme: {
     extend: {
-      // backgroundImage: {
-      //   'gradient-conic':
-      //     'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      // },
+      backgroundImage: {
+        'gradient-conic':
+          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      },
       colors: {
         primary: 'var(--color-primary)',
         'gradient-1': 'var(--color-gradient-1)',
@@ -50,45 +50,52 @@ module.exports = {
         secondary: 'var(--font-secondary)',
       },
       theme: {
-        // bejamas: {
-        //   colors: {
-        //     primary: '#FF8585',
-        //     'gradient-1': '#7d7aff',
-        //     'gradient-2': '#2121E2',
-        //     'gradient-3': '#FF76B8',
-        //     'gradient-4': '#001AFF',
-        //   },
-        // },
+        bejamas: {
+          colors: {
+            primary: '#FF8585',
+            reddie: {
+              colors: {
+                primary: '#FF4D4D',
+                'gradient-1': '#FFC700',
+                'gradient-2': '#FF85DD',
+                'gradient-3': '#FF85DD',
+                'gradient-4': '#FF8585',
+              },
+            },
+          },
+        },
       },
       typography(theme) {
         return {
           dark: {
             css: {
-              color: theme('colors.gray.300'),
-              '[class~="lead"]': { color: theme('colors.gray.400') },
-              a: { color: theme('colors.gray.100') },
-              strong: { color: theme('colors.gray.100') },
-              'ul > li::before': { backgroundColor: theme('colors.gray.700') },
-              hr: { borderColor: theme('colors.gray.800') },
-              blockquote: {
-                color: theme('colors.gray.100'),
-                borderLeftColor: theme('colors.gray.800'),
+              color: theme('colors.neutral.300'),
+              '[class~="lead"]': { color: theme('colors.neutral.400') },
+              a: { color: theme('colors.neutral.100') },
+              strong: { color: theme('colors.neutral.100') },
+              'ul > li::before': {
+                backgroundColor: theme('colors.neutral.700'),
               },
-              h1: { color: theme('colors.gray.100') },
-              h2: { color: theme('colors.gray.100') },
-              h3: { color: theme('colors.gray.100') },
-              h4: { color: theme('colors.gray.100') },
-              code: { color: theme('colors.gray.100') },
-              'a code': { color: theme('colors.gray.100') },
+              hr: { borderColor: theme('colors.neutral.800') },
+              blockquote: {
+                color: theme('colors.neutral.100'),
+                borderLeftColor: theme('colors.neutral.800'),
+              },
+              h1: { color: theme('colors.neutral.100') },
+              h2: { color: theme('colors.neutral.100') },
+              h3: { color: theme('colors.neutral.100') },
+              h4: { color: theme('colors.neutral.100') },
+              code: { color: theme('colors.neutral.100') },
+              'a code': { color: theme('colors.neutral.100') },
               pre: {
-                color: theme('colors.gray.200'),
-                backgroundColor: theme('colors.gray.800'),
+                color: theme('colors.neutral.200'),
+                backgroundColor: theme('colors.neutral.800'),
               },
               thead: {
-                color: theme('colors.gray.100'),
-                borderBottomColor: theme('colors.gray.700'),
+                color: theme('colors.neutral.100'),
+                borderBottomColor: theme('colors.neutral.700'),
               },
-              'tbody tr': { borderBottomColor: theme('colors.gray.800') },
+              'tbody tr': { borderBottomColor: theme('colors.neutral.800') },
             },
           },
         };
