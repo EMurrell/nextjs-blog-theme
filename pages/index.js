@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { getPosts } from '../utils/mdx-utils';
 
-import Footer from '../components/Footer';
+import Nav from '../components/Nav';
 import Header from '../components/Header';
 import Layout, { GradientBackground } from '../components/Layout';
 import ArrowIcon from '../components/ArrowIcon';
@@ -11,14 +11,14 @@ import SEO from '../components/SEO';
 export default function Index({ posts, globalData }) {
   return (
     <Layout>
-      <Footer copyrightText={globalData.footerText} />
       <SEO title={globalData.name} description={globalData.blogTitle} />
-      <Header name={globalData.name} />
+      <Nav />
 
       <main className="w-full">
-        <h1 className="mb-12 text-3xl text-center lg:text-5xl">
+        <h1 className="pl-4 mb-12 text-3xl font-bold text-left lg:text-4xl">
           {globalData.blogTitle}
         </h1>
+        <h2 className="pl-4 mb-12 text-2xl font-semibold text-left lg:text-3xl"></h2>
         <ul className="w-full">
           {posts.map((post) => (
             <li
@@ -48,15 +48,6 @@ export default function Index({ posts, globalData }) {
           ))}
         </ul>
       </main>
-
-      {/* <GradientBackground
-        variant="large"
-        className="fixed top-20 opacity-40 dark:opacity-60"
-      />
-      <GradientBackground
-        variant="small"
-        className="absolute bottom-0 opacity-20 dark:opacity-10"
-      /> */}
     </Layout>
   );
 }
