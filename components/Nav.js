@@ -3,8 +3,8 @@ import Link from 'next/link';
 const sunIcon = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="25"
-    height="24"
+    width="23"
+    height="22"
     fill="none"
     viewBox="0 0 25 24"
     className="dark:opacity-50"
@@ -33,8 +33,8 @@ const sunIcon = (
 const moonIcon = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="21"
-    height="20"
+    width="19"
+    height="18"
     fill="none"
     viewBox="0 0 21 20"
   >
@@ -59,7 +59,7 @@ const ThemeSwitcher = () => {
           document.documentElement.classList.add('dark');
           localStorage.setItem('theme', 'dark');
         }}
-        className="flex items-center justify-center w-12 h-8 h-full p-2 pr-2 transition dark:bg-neutral-500 rounded-3xl align-center"
+        className="flex items-center justify-center h-full p-2 pr-2 transition w-11 h-7 dark:bg-neutral-500 rounded-3xl align-center"
       >
         {moonIcon}
       </button>
@@ -71,7 +71,7 @@ const ThemeSwitcher = () => {
           document.documentElement.classList.remove('dark');
           localStorage.setItem('theme', 'light');
         }}
-        className="flex items-center justify-center w-12 h-8 h-full p-2 pr-2 transition bg-neutral-500 dark:bg-transparent rounded-3xl align-center"
+        className="flex items-center justify-center h-full p-2 pr-2 transition w-11 h-7 bg-neutral-500 dark:bg-transparent rounded-3xl align-center"
       >
         {sunIcon}
       </button>
@@ -79,12 +79,12 @@ const ThemeSwitcher = () => {
   );
 };
 
-export default function Footer({ copyrightText }) {
+export default function Nav() {
   return (
-    <span className="flex flex-row items-center justify-between w-full px-4 pt-8">
+    <span className="flex flex-row items-center justify-between w-full px-4 pt-10 pb-16">
       <Link href="/">
-        <a className="font-bold uppercase dark:text-white opacity-60">
-          {copyrightText}
+        <a className="text-2xl font-bold dark:text-white opacity-60">
+          Eric Murrell
         </a>
       </Link>
       <ThemeSwitcher />
