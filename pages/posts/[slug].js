@@ -45,11 +45,13 @@ export default function PostPage({
 
       <article className="px-6 md:px-0">
         <header>
-          <h1 className="mb-12 text-3xl text-center md:text-5xl dark:text-white">
+          <h1 className="mb-12 text-4xl font-bold text-center md:text-5xl dark:text-white">
             {frontMatter.title}
           </h1>
           {frontMatter.description && (
-            <p className="mb-4 text-xl">{frontMatter.description}</p>
+            <p className="mb-12 text-3xl font-bold">
+              {frontMatter.description}
+            </p>
           )}
         </header>
         <main>

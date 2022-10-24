@@ -81,7 +81,7 @@ const ThemeSwitcher = () => {
 
 export default function Nav() {
   return (
-    <span className="flex flex-row items-center justify-between w-full px-4 pt-10 pb-16">
+    <span className="flex flex-row items-center justify-between w-full px-4 pt-10 pb-16 lg:px-0">
       <Link href="/">
         <a className="text-2xl font-bold dark:text-white opacity-60">
           Eric Murrell

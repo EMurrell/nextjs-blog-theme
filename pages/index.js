@@ -29,7 +29,7 @@ export default function Index({ posts, globalData }) {
                 as={`/posts/${post.filePath.replace(/\.mdx?$/, '')}`}
                 href={`/posts/[slug]`}
               >
-                <a className="block px-6 py-6 lg:py-10 lg:px-16 focus:outline-none focus:ring-4">
+                <a className="block px-6 py-6 lg:py-10 lg:px-16 focus:outline-none ">
                   {post.data.date && (
                     <p className="mb-3 font-bold uppercase opacity-60">
                       {post.data.date}
