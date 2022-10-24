@@ -4,7 +4,7 @@ export const getGlobalData = () => {
     : 'Eric Murrell';
   const blogTitle = process.env.BLOG_TITLE
     ? decodeURI(process.env.BLOG_TITLE)
-    : 'Studies On Modern Technologies';
+    : 'Writings On Modern Technologies';
   const navText = process.env.BLOG_NAV_TEXT
     ? decodeURI(process.env.BLOG_NAV_TEXT)
     : 'Eric Murrell';
