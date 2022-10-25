@@ -1,34 +1,67 @@
 ---
 title: Componet-Driven Development In Under 5 Minutes
-description: 'Building UIs from the Bottom Up.'
+description: 'Expository'
 ---
 
-My team and I have just begun work on a new large-scale enterprise web application, and I’ve been tasked with implementing the design of the user interface. While it has been tempting to add the different components ad hoc, tweaking this and that and throwing in border radius here and drop-shadow there, we’ve decided to first construct the UI primitives (buttons, form elements, etc) in isolation, incorporating a true design system of reusable components into our workflow.
+My team and I have just begun work on a new enterprise web application, and I’ve
+been tasked with implementing the design of the user interface. While it has
+been tempting to add the different components ad hoc, we’ve decided to first
+construct the UI primitives (buttons, form elements, etc) in isolation,
+incorporating a true design system of reusable components into our workflow.
 
 ## What is Component-Driven Development?
 
-Modern web and software development has seen a strong tendency toward component libraries and frameworks (think Meta’s React or Google’s Angular). Whereas page-based development is a design process that treats the application as a collection of pages, each with their own purposes and functionalities, component-driven design (CDD) focuses around building the UI from the component up. This modular approach allows developers to focus on creating these building-blocks in isolation from application-specific logic and/or state. These components can then be reused across applications and organizations.
+Modern web and software development has undoubtedly seen a strong tendency
+toward component libraries and frameworks (think React, Vue, or Angular). Unlike
+page-based development (a design process that treats the application as a
+collection of pages, each with their own purposes and functionalities),
+component-driven design (CDD) focuses around building the UI from the component
+up. This modular approach allows developers to focus on creating these
+building-blocks in isolation from application-specific logic and/or state. These
+components can then be reused across applications and organizations.
 
-## Benefits of CDD
+## Benefits
 
 ### Strength and Stability
 
-By building out your UI component in isolation, you can define it’s various states and more easily test its functionality. Discover bugs and pinpoint edge cases before ever touching the logic of your application, then reuse them as part of a design system or component library.
+By building out your UI component in isolation, you can define its various
+states and more easily test its functionality. Discover bugs and pinpoint edge
+cases before ever touching the logic of your application, then reuse them as
+part of a design system or component library.
 
 ### Consistency
 
-By reusing components across your project, you can ensure your application portrays a sense of clarity, uniformity, intent and purpose. Think brand identity and style guides.
+By reusing components across your project, you can ensure your application
+portrays a sense of clarity, uniformity, intent and purpose. Think brand
+identity and style guides.
 
 ### Efficiency
 
-Spend less time rewriting code, and share tasks across your team to more rapidly build and ship products. Collect crucial feedback from various stakeholders quickly and easily, without the need for complex development environments.
+Share tasks across your team to more rapidly build and ship products. Collect
+crucial feedback from various stakeholders quickly and easily, without the need
+for complex development environments.
 
 ## Where To Start
 
-One major example of CDD in the wild is Storybook, an open-source “frontend workshop for UI development”. You can use Storybook to build and test UI components (and even pages) in isolation, or browse and use existing design system libraries. It provides a simple interface for accessing components, testing interactions in the browser, and collaborating across design and development teams. You can also use Storybook to publish your design system/component library as an NPM package, or as a tool for writing documentation.
+Perhaps the best example of component-driven development in the wild is
+Storybook, an open-source “frontend workshop for UI development”. You can use
+Storybook to build and test UI components (and even pages) in isolation, or
+browse and use existing design systems and component libraries. It provides a
+simple interface for accessing components, testing interactions in the browser,
+and collaborating across design and development teams. You can also use
+Storybook to publish your design system/component library as an NPM package, or
+as a tool for writing documentation.
 
-You can also find some in-depth reading over at [componentdriven.org](https://www.componentdriven.org/), try your hand at some tutorials at [storybook.js.org](https://storybook.js.org/), or take a free-access course at [https://egghead.io/courses/component-driven-development-in-react-e0bf](https://egghead.io/courses/component-driven-development-in-react-e0bf)
+You can find some in-depth reading over at
+[componentdriven.org](https://www.componentdriven.org/), try your hand at some
+tutorials at [storybook.js.org](https://storybook.js.org/), or take a
+free-access course at
+[https://egghead.io/courses/component-driven-development-in-react-e0bf](https://egghead.io/courses/component-driven-development-in-react-e0bf)
 
 ## Conclusion
 
-As user interfaces become increasingly complex, Component-Driven Development is becoming the more common-place methodology of ensuring the quality, durability, and scalability of applications. Storybook is the most popular tool for developing components in isolation, and is a great place to start diving into the practicality of building your next project from the component up.
+As user interfaces become increasingly complex, Component-Driven Development is
+becoming the more common-place methodology of ensuring the quality, durability,
+and scalability of applications. Storybook is the most popular tool for
+developing components in isolation, and is a great place to start diving into
+the practicality of building your next project from the component up.

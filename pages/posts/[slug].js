@@ -48,14 +48,9 @@ export default function PostPage({
           <h1 className="mb-12 text-4xl font-bold text-center md:text-5xl dark:text-white">
             {frontMatter.title}
           </h1>
-          {frontMatter.description && (
-            <p className="mb-12 text-3xl font-bold">
-              {frontMatter.description}
-            </p>
-          )}
         </header>
         <main>
-          <article className="prose dark:prose-dark">
+          <article className="prose dark:prose-dark text-lg lg:text-xl">
             <MDXRemote {...source} components={components} />
           </article>
         </main>

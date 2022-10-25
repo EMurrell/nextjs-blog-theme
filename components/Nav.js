@@ -1,5 +1,6 @@
 import Link from 'next/link';
-
+import { Github, Twitter } from '@icons-pack/react-simple-icons';
+import { EnvelopeIcon } from '@heroicons/react/solid';
 const sunIcon = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -51,7 +52,7 @@ const moonIcon = (
 
 const ThemeSwitcher = () => {
   return (
-    <div className="flex justify-center p-1 bg-neutral-300 dark:bg-neutral-700 rounded-3xl">
+    <div className="flex justify-center p-1 bg-neutral-300 dark:bg-neutral-700 rounded-3xl mb-24">
       <button
         type="button"
         aria-label="Use Dark Mode"
@@ -59,7 +60,7 @@ const ThemeSwitcher = () => {
           document.documentElement.classList.add('dark');
           localStorage.setItem('theme', 'dark');
         }}
-        className="flex items-center justify-center h-full p-2 pr-2 transition w-11 h-7 dark:bg-neutral-500 rounded-3xl align-center"
+        className="flex items-center justify-center  p-2 pr-2 transition w-11 h-7 dark:bg-neutral-500 rounded-3xl align-center"
       >
         {moonIcon}
       </button>
@@ -71,7 +72,7 @@ const ThemeSwitcher = () => {
           document.documentElement.classList.remove('dark');
           localStorage.setItem('theme', 'light');
         }}
-        className="flex items-center justify-center h-full p-2 pr-2 transition w-11 h-7 bg-neutral-500 dark:bg-transparent rounded-3xl align-center"
+        className="flex items-center justify-center  p-2 pr-2 transition w-11 h-7 bg-neutral-500 dark:bg-transparent rounded-3xl align-center"
       >
         {sunIcon}
       </button>
@@ -81,12 +82,39 @@ const ThemeSwitcher = () => {
 
 export default function Nav() {
   return (
-    <span className="flex flex-row items-center justify-between w-full px-4 pt-10 pb-16 lg:px-0">
-      <Link href="/">
-        <a className="text-2xl font-bold dark:text-white opacity-60">
-          Eric Murrell
-        </a>
-      </Link>
+    <span className="flex flex-row items-center justify-between w-full px-4 pt-10 pb-6 lg:px-0">
+      <div className="flex flex-col">
+        <Link href="/">
+          <a className="text-2xl font-bold dark:text-white opacity-60">
+            Eric Murrell
+          </a>
+        </Link>
+        <div className="flex flex-row pb-4 text-neutral-500">
+          <a href="https://github.com/emurrell">
+            <Github className="my-6 mr-6 w-7 h-7 " />
+          </a>
+          <a href="mailto:emurrell.dev@gmail.com">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-8 h-8 mt-6 mr-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
+              />
+            </svg>
+          </a>
+
+          <a href="https://twitter.com/emurrelldev">
+            <Twitter className="my-6 mr-6 transition duration-100 w-7 h-7 " />
+          </a>
+        </div>
+      </div>
       <ThemeSwitcher />
     </span>
   );
