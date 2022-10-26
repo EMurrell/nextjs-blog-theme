@@ -52,7 +52,7 @@ const moonIcon = (
 
 const ThemeSwitcher = () => {
   return (
-    <div className="flex justify-center p-1 bg-neutral-300 dark:bg-neutral-700 rounded-3xl mb-24">
+    <div className="flex justify-center mt-3 p-1 bg-neutral-300 dark:bg-neutral-700 rounded-3xl mb-24">
       <button
         type="button"
         aria-label="Use Dark Mode"
@@ -60,7 +60,7 @@ const ThemeSwitcher = () => {
           document.documentElement.classList.add('dark');
           localStorage.setItem('theme', 'dark');
         }}
-        className="flex items-center justify-center  p-2 pr-2 transition w-11 h-7 dark:bg-neutral-500 rounded-3xl align-center"
+        className="flex items-center justify-center  p-2 pr-2 transition w-11 h-9 dark:bg-neutral-500 rounded-3xl align-center"
       >
         {moonIcon}
       </button>
@@ -72,7 +72,7 @@ const ThemeSwitcher = () => {
           document.documentElement.classList.remove('dark');
           localStorage.setItem('theme', 'light');
         }}
-        className="flex items-center justify-center  p-2 pr-2 transition w-11 h-7 bg-neutral-500 dark:bg-transparent rounded-3xl align-center"
+        className="flex items-center justify-center  p-2 pr-2 transition w-11 h-9 bg-neutral-500 dark:bg-transparent rounded-3xl align-center"
       >
         {sunIcon}
       </button>
@@ -82,16 +82,16 @@ const ThemeSwitcher = () => {
 
 export default function Nav() {
   return (
-    <span className="flex flex-row items-center justify-between w-full px-4 pt-10 pb-6 lg:px-0">
+    <span className="flex flex-row items-center justify-between w-full px-4 pt-3 lg:px-0">
       <div className="flex flex-col">
         <Link href="/">
-          <a className="text-2xl font-bold dark:text-white opacity-60">
+          <a className="text-2xl -mt-1 font-bold dark:text-white opacity-60">
             Eric Murrell
           </a>
         </Link>
         <div className="flex flex-row pb-4 text-neutral-500">
           <a href="https://github.com/emurrell">
-            <Github className="my-6 mr-6 w-7 h-7 " />
+            <Github className="my-4 mr-6 w-6 h-6 hover:text-neutral-300" />
           </a>
           <a href="mailto:emurrell.dev@gmail.com">
             <svg
@@ -100,7 +100,7 @@ export default function Nav() {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="w-8 h-8 mt-6 mr-6"
+              className="w-7 h-7 mt-3.5 mr-6 hover:text-neutral-300"
             >
               <path
                 strokeLinecap="round"
@@ -111,7 +111,7 @@ export default function Nav() {
           </a>
 
           <a href="https://twitter.com/emurrelldev">
-            <Twitter className="my-6 mr-6 transition duration-100 w-7 h-7 " />
+            <Twitter className="my-4 mr-6 transition duration-100 w-6 h-6 hover:text-neutral-300" />
           </a>
         </div>
       </div>
