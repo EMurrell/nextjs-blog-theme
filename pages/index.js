@@ -15,10 +15,15 @@ export default function Index({ posts, globalData }) {
       <Nav />
 
       <main className="w-full">
+        <h2 className="px-4 mb-12 text-xl text-neutral-700 dark:text-neutral-400 font-medium text-left lg:text-2xl">
+          Hello! <br /> I&apos;m Eric, a writer and web developer. I work with
+          agencies and SaaS startups to create and market compelling digital
+          products.
+        </h2>
         <h1 className="pl-4 mb-12 text-3xl font-bold text-left lg:text-4xl">
           {globalData.blogTitle}
         </h1>
-        <h2 className="pl-4 mb-12 text-2xl font-semibold text-left lg:text-3xl"></h2>
+
         <ul className="w-full">
           {posts.map((post) => (
             <li
